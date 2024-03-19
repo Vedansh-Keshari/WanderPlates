@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wander Plates</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap" />
+    <style>
+      :root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto;
+  background: url(../assets/images/dc52bf11a6f750cc2be804d92ff7835b1b21c724.png)
+    no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+.rectangle {
+  position: absolute;
+  width: 1176px;
+  height: 846px;
+  top: 89px;
+  left: 140px;
+  background: url('bg.jpg')
+    no-repeat center;
+  background-size: cover;
+}
+.rectangle-1 {
+  position: absolute;
+  width: 435px;
+  height: 651px;
+  top: 87px;
+  left: 137px;
+  font-size: 0px;
+  background: #ffffff;
+  z-index: 1;
+  border-radius: 20px;
+  box-shadow: 5px 5px 8px 0 rgba(101, 101, 101, 0.92);
+}
+.sign-up {
+  display: block;
+  position: relative;
+  height: 66px;
+  margin: 7px 0 0 26px;
+  color: #000000;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 4;
+}
+.full-name {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 76px;
+  left: 26px;
+  color: #000000;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 9;
+}
+
+.rectangle-2 {
+  position: absolute;
+  width: 370px;
+  height: 47px;
+  top: 130px;
+  left: 26px;
+  background: #ffffff;
+  z-index: 10;
+}
+.rectangle-2 input
+{
+  position: absolute;
+  width: 370px;
+  height: 47px;
+  top: 0px;
+  left: 0px;
+  background: #e5dde4;
+  z-index: 10;
+  border:none;
+  border-radius: 10px;
+
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+}
+.last-name {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 171px;
+  left: 26px;
+  color: #000000;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 11;
+}
+.rectangle-3 {
+  position: absolute;
+  width: 370px;
+  height: 47px;
+  top: 225px;
+  left: 26px;
+  background: #ffffff;
+  z-index: 12;
+}
+.rectangle-3 input{
+  position: absolute;
+  width: 370px;
+  height: 47px;
+  top: 0px;
+  left: 0px;
+  border:none;
+  border-radius: 10px;
+  background: #e5dde4;
+  z-index: 12;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+}
+.email-address {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 266px;
+  left: 26px;
+  color: #000000;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.example-com {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 311px;
+  left: 44px;
+  color: #797777;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 8;
+}
+.rectangle-4 {
+  position: absolute;
+  width: 370px;
+  height: 47px;
+  top: 320px;
+  left: 26px;
+  background: <div id="ffffff"></div>;
+  z-index: 5;
+}
+
+.rectangle-4 input{
+  position: absolute;
+  width: 370px;
+  height: 47px;
+  top: 0px;
+  left: 0px;
+  border:none;
+  border-radius: 10px;
+  background: #e5dde4;
+  z-index: 5;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+}
+.password {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 362px;
+  left: 26px;
+  color: #000000;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.password1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 401px;
+  left: 44px;
+  color: #797777;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 7;
+}
+
+.password1 input{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 401px;
+  left: 44px;
+  color: #797777;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 7;
+}
+.rectangle-5 {
+  position: absolute;
+  width: 370px;
+  height: 47px;
+  top: 413px;
+  left: 26px;
+  background: #ffffff;
+  z-index: 6;
+}
+.rectangle-5 input{
+  position: absolute;
+  width: 370px;
+  height: 47px;
+  top: 0px;
+  left: 0px;
+  border:none;
+  border-radius: 10px;
+  background: #15F5BA;
+  z-index: 6;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.flex-row-b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 296px;
+  height: 66px;
+  margin: 0 0 0 26px;
+  z-index: 6;
+}
+
+.login_link{
+flex-shrink: 0;
+  position: relative;
+  height: 66px;
+  color: #b54af6;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  text-decoration: none;
+  white-space: nowrap;
+  z-index: 6;
+}
+.login_link a{
+color: #6420AA;
+  text-decoration: none;
+}
+.login_link a:hover{
+  text-decoration: underline;
+}
+
+.join-now {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 90px;
+  top: 492px;
+  left: 133px;
+  color: #ffffff;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 90px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 14;
+}
+
+.join_button {
+  color: #ffffff;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 90px;
+  text-align:centre ;
+  white-space: nowrap;
+
+  position: absolute;
+  width: 370px;
+  height: 88px;
+  top: 494px;
+  left: 26px;
+  cursor: pointer;
+  background: #b54af6;
+  border: none;
+  z-index: 13;
+  border-radius: 20px;
+}
+
+.join_button:hover{
+  background-color: #6420AA
+}
+.join_button:active{
+background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.image {
+  position: absolute;
+  width: 570px;
+  height: 462px;
+  top: 332px;
+  left: 591px;
+  background: url(./assets/images/1470760d942d2ee00654b536642a183b963edecb.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 15;
+}
+.image-6 {
+  position: relative;
+  width: 163px;
+  height: 80px;
+  margin: 26px 0 0 285px;
+  background: url(./assets/images/b28dda05d4abf97d9c8b275704435b2052d55ff2.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 17;
+}
+.standard {
+  position: absolute;
+  width: 518px;
+  height: 574px;
+  top: 390px;
+  left: 723px;
+  background: url(./assets/images/6fb2c541cf85f349f7c4e7d29cbc0bae90a1b9fd.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 16;
+}
+
+.flex-row-b {
+  position: relative;
+  width: 296px;
+  height: 66px;
+  margin: 500px 0 0 140px;
+  z-index: 12;
+}
+    </style>
+    <script>
+      function ValidateEmail(inputText)
+      {
+         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+         if(inputText.value.match(mailformat))
+         {
+<!--            document.write("Valid email address!");-->
+            document.form1.Email.focus();
+            return true;
+         }
+         else
+         {
+<!--            document.write("You have entered an invalid email address!"); onclick="ValidateEmail(document.form1.Email)"-->
+            alert("Invalid Email Address...")
+            document.form1.text1.focus();
+            return false;
+         }
+      }
+      </script>
+  </head>
+  <body>
+    <div class="main-container">
+      <form  method="POST" action="/signup_button">
+      <div class="rectangle">
+        <div class="rectangle-1">
+          <span class="sign-up">Sign Up</span
+          ><span class="full-name">Name</span>
+          <span class="rectangle-2"> <input type="text" name="fullname" placeholder="Enter Full Name" autofocus autocomplete="off" required /></span>
+          <span class="last-name">Username</span>
+          <span class="rectangle-3"><input type="text" name="username" placeholder="Enter  Username"  autocomplete="off" required /></span>
+          <span class="email-address">Email Address</span>
+          <span class="rectangle-4"><input type="text" name="email" placeholder="Enter Email Address"  autocomplete="off" required /></span>
+          <span class="password">Password</span>
+          <span class="rectangle-5"><input type="password" name="password" placeholder="Enter 8 characters or more" autocomplete="off" required />></span>
+          <span class="flex-row-b">
+          <span class="login_link"><a type="submit" href="/login">Back to Login </a></span>
+          </span>
+          <span class="join-now"></span>
+          <button class="join_button" type="submit" name="click" value="btn_click">JOIN NOW</button>
+
+        </div>
+        <div class="image"><div class="image-6"></div></div>
+      </div>
+      </form>
+      <div class="standard"></div>
+    </div>
+  </body>
+</html>

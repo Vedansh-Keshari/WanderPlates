@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wander Plates</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap" />
+<style>
+  :root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto;
+  background: url(../assets/images/dc52bf11a6f750cc2be804d92ff7835b1b21c724.png)
+    no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+.rectangle {
+  position: relative;
+  width: 1176px;
+  height: 846px;
+  margin: 88px 0 0 140px;
+  background: url('bg.jpg')
+  no-repeat center;
+  background-size: cover;
+  overflow: visible auto;
+}
+.rectangle-1 {
+  position: relative;
+  width: 435px;
+  height: 651px;
+  margin: 98px 0 0 370px;
+  font-size: 0px;
+    background-color: #F6F5F5;
+<!--  background: url('bg1.jpeg')-->
+  no-repeat center;
+  background-size: cover;
+  z-index: 1;
+  overflow: visible auto;
+  border-radius: 20px;
+
+}
+.forgot-password {
+  display: block;
+  position: relative;
+  height: 66px;
+  margin: 64px 0 0 26px;
+  color: #000000;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 4;
+}
+.reset-password {
+  display: block;
+  position: relative;
+  height: 66px;
+  margin: 2px 0 0 26px;
+  color: #000000;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 2;
+}
+.new-password {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 199px;
+  left: 26px;
+  color: #000000;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 3;
+}
+.new-pass {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 241px;
+  left: 44px;
+  color: #797777;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 6;
+}
+.new-pass input{
+
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  top: 45px;
+  left: 18px;
+  width: 350px;
+  padding: 0 5px;
+  height: 66px;
+  border: none;
+  background: none;
+  outline: none;
+  }
+.rectangle-2 {
+  position: absolute;
+  width: 370px;
+  height: 47px;
+  top: 252px;
+  left: 26px;
+  background: #e5dde4;
+  z-index: 5;
+  border-radius: 20px;
+}
+.confirm-new-password {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 325px;
+  left: 26px;
+  color: #000000;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 7;
+}
+.confirm-pass {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 367px;
+  left: 44px;
+  color: #000000;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 9;
+}
+.confirm-pass input{
+
+  top: 45px;
+  left: 18px;
+  width: 350px;
+  padding: 0 5px;
+  height: 66px;
+  border: none;
+  background: none;
+  outline: none;
+  border-radius:20px;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+}
+.rectangle-button {
+  position: absolute;
+  width: 370px;
+  height: 47px;
+  top: 378px;
+  left: 26px;
+  cursor: pointer;
+  background: #e5dde4;
+  border: none;
+  z-index: 8;
+  border-radius: 20px;
+}
+.reset-span {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 90px;
+  top: 492px;
+  left: 155px;
+  color: #ffffff;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 90px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 11;
+}
+.rectangle-button-4 {
+  position: absolute;
+  width: 370px;
+  height: 88px;
+  top: 494px;
+  left: 26px;
+  cursor: pointer;
+  background: #b54af6;
+  border: none;
+  z-index: 10;
+  border-radius: 20px;
+  color:#ffffff;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+ .rectangle-button-4:hover{
+  background-color: #6420AA
+}
+.rectangle-button-4:active{
+background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(20px);
+}
+  </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="rectangle">
+        <form method="POST" action="/forgot_pass2">
+        <div class="rectangle-1">
+          <span class="forgot-password">Forgot Password?</span
+          ><span class="reset-password">It’s okay! Reset your password.</span
+          ><span class="new-password">New Password</span
+          ><span class="new-pass">
+          <input type="password" name="new_pass" placeholder="New Password"  autocomplete="off" autofocus required />
+        </span>
+          <div class="rectangle-2"></div>
+          <span class="confirm-new-password">Confirm New Password</span
+          ><span class="confirm-pass"><input type="password" name="new_pass" placeholder="Confirm Password"  autocomplete="off" required/></span>
+          <button class="rectangle-button"></button>
+          <span class="reset-span"></span>
+            <button class="rectangle-button-4" class="reset-button" id="reset_button" type="reset">RESET</button>
+        </div>
+        </form>
+      </div>
+    </div>
+    <!-- Generated by Codia AI - https://codia.ai/ -->
+  </body>
+</html>
