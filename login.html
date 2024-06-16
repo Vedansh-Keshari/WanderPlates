@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wander Plates</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap" />
+    <style>
+    :root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto;
+  background: url(../assets/images/dc52bf11a6f750cc2be804d92ff7835b1b21c724.png)
+    no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+.rectangle-one {
+  position: absolute;
+  width: 1176px;
+  height: 846px;
+  top: 89px;
+  left: 140px;
+  background: url("bg.jpg")
+    no-repeat center;
+  background-size: cover;
+  border-radius: 20px;
+}
+.rectangle-two {
+  position: absolute;
+  width: 435px;
+  height: 651px;
+  top: 87px;
+  left: 137px;
+  font-size: 0px;
+  background: #ffffff;
+  z-index: 1;
+  border-radius: 20px;
+  box-shadow: 5px 5px 8px 0 rgba(101, 101, 101, 0.92);
+}
+.login {
+  display: block;
+  position: relative;
+  height: 66px;
+  margin: 22px 0 0 26px;
+  color: #000000;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 7;
+}
+.flex-row-b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 296px;
+  height: 66px;
+  margin: 0 0 0 26px;
+  z-index: 6;
+}
+.dont-have-account {
+  flex-shrink: 0;
+  position: relative;
+  height: 66px;
+  color: #000000;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 2;
+}
+.sign_up {
+  flex-shrink: 0;
+  position: relative;
+  height: 66px;
+  color: #b54af6;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  text-decoration: underline;
+  white-space: nowrap;
+  z-index: 6;
+}
+
+.sign_up a{
+  color: #6420AA;
+  text-decoration: none;
+}
+.sign_up a:hover{
+  color: #6420AA;
+  text-decoration: underline;
+}
+.flex-row {
+  position: relative;
+  width: 370px;
+  height: 111px;
+  margin: 6px 0 0 26px;
+  z-index: 12;
+}
+.email-address {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 0;
+  left: 0;
+  color: #000000;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 3;
+}
+.email_input {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 45px;
+  left: 18px;
+  color: #797777;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 12;
+}
+.email_input input{
+
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  top: 45px;
+  left: 18px;
+  width: 350px ;
+  padding: 0 5px;
+  height: 66px;
+  border: none;
+  background: none;
+  outline: none;
+  }
+.rectangle {
+  position: absolute;
+  width: 370px;
+  height: 47px;
+  top: 54px;
+  left: 0;
+  background: #e5dde4;
+  z-index: 8;
+  border-radius: 20px;
+}
+.flex-row-b-1 {
+  position: relative;
+  width: 370px;
+  height: 158px;
+  margin: 22px 0 0 26px;
+  z-index: 15;
+}
+.password {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 0;
+  left: 0;
+  color: #000000;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 4;
+}
+
+.forgot-password {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 0;
+  left: 226px;
+  color: #b54af6;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: left;
+  text-decoration: underline;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.forgot-password  a:hover{
+
+  color: #6420AA;
+  text-align: left;
+  text-decoration: underline;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.pass_input {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 45px;
+  left: 18px;
+  color: #797777;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 12;
+}
+.pass_input input
+{
+font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  top: 45px;
+  left: 18px;
+  width: 340px;
+  padding: 0 5px;
+  height: 66px;
+
+  border: none;
+  background: none;
+  outline: none;
+}
+.rectangle-2 {
+  position: absolute;
+  width: 370px;
+  height: 47px;
+  top: 51px;
+  left: 0;
+  background: #e5dde4;
+  z-index: 9;
+  border-radius: 20px;
+}
+.remember-me {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 66px;
+  top: 92px;
+  left: 32px;
+  color: #797777;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 11;
+}
+
+.rectangle-3 {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 114px;
+  left: 0;
+  background: #d9d9d9;
+  z-index: 15;
+  border-radius: 10px;
+}
+.flex-row-cf {
+  position: relative;
+  width: 370px;
+  height: 90px;
+  margin: 41px 0 0 26px;
+  z-index: 14;
+}
+.login-4 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 90px;
+  top: 0;
+  left: 129px;
+  color: #ffffff;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 90px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 14;
+}
+.login-button {
+  position: absolute;
+  width: 370px;
+  height: 88px;
+  top: 2px;
+  left: 0;
+  cursor: pointer;
+  background: #b54af6;
+  color:#ffffff;
+  font-family: Red Hat Display, var(--default-font-family);
+  font-size: 30px;
+  font-weight: 700;
+  border: none;
+  z-index: 13;
+  border-radius: 20px;
+}
+.login-button:hover{
+  background-color: #6420AA
+}
+.login-button:active{
+background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.image {
+  position: absolute;
+  width: 570px;
+  height: 462px;
+  top: 332px;
+  left: 591px;
+  background: url(./assets/images/1470760d942d2ee00654b536642a183b963edecb.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 16;
+}
+.image-5 {
+  position: relative;
+    </style>
+     <script>
+      function ValidateEmail(inputText)
+      {
+         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+         if(inputText.value.match(mailformat))
+         {
+<!--            document.write("Valid email address!");-->
+            document.form1.Email.focus();
+            return true;
+         }
+         else
+         {
+<!--            document.write("You have entered an invalid email address!"); onclick="ValidateEmail(document.form1.Email)"-->
+            alert("Invalid Email Address...")
+            document.form1.text1.focus();
+            return false;
+         }
+      }
+      </script>
+
+  </head>
+  <body>
+    <div class="main-container">
+      <form method="POST" action="/login_button">
+      <div class="rectangle-one">
+        <div class="rectangle-two">
+          <span class="login">Login</span>
+          <div class="flex-row-b">
+            <span class="dont-have-account">Don't have an account yet?</span>
+            <span class="sign_up"><a type="submit" href="/signup">Sign up</a></span>
+          </div>
+          <div class="flex-row">
+            <span class="email-address">Email Address</span>
+            <span class="email_input"><input type="text" name="email" placeholder="Enter Email Address bro"  autocomplete="off" required autofocus ></input></span>
+            <div class="rectangle" style=""></div>
+          </div>
+          <div class="flex-row-b-1">
+            <span class="password">Password</span>
+
+            <span class="pass_input"><input type="password" name="password" placeholder="Enter 8 characters or more" autocomplete="off" required ></input></span>
+            <span class="forgot-password"><a href="/forgotpass1">Forgot Password?</a></span>
+            <div class="rectangle-2"></div>
+            <span class="remember-me"><label class="form-check-label"><input class="form-check-input" type="checkbox" name="remember_me" id="remember_me" value="remember_me1" ></label>Remember me</span>
+
+          </div>
+          <div class="flex-row-cf">
+            <button class="login-button" id="login_button" type="submit" name="click" value="btn_click">LOGIN</button>
+      </form>
+          </div>
+        </div>
+        <div class="image"><div class="image-5"></div></div>
+      </div>
+      <div class="standard"></div>
+    </div>  
+  </body>
+</html>
